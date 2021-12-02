@@ -1,0 +1,13 @@
+{
+  "require": {
+    "ext-mysqli": "*",
+    "league/csv": "^9.7",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "classes\\": "classes",
+      "claire\\": "vendor/claire"
+    }
+  }
+}
