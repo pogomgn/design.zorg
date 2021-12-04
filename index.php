@@ -36,7 +36,7 @@ ob_end_flush();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ОНД | Статистика</title>
+    <title>Design | Zorg</title>
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -76,7 +76,7 @@ ob_end_flush();
         <a href="index3.html" class="brand-link">
             <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
-            <span class="brand-text font-weight-light">Статистика</span>
+            <span class="brand-text font-weight-light">Design.Zorg</span>
         </a>
 
         <div class="sidebar">
@@ -129,219 +129,176 @@ ob_end_flush();
         <div class="content">
             <div class="row">
                 <div class="col-12">
-
-                    <? if ($isAdmin) { ?>
-                        <div class="card card-primary card-outline">
-                            <div class="card-header">
-                                <a href="#" id="btnTest1" class="btn btn-primary">otdelko table</a>
-                                <a href="#" id="btnTest2" class="btn btn-primary">clear orders + 1st</a>
-                                <a href="#" id="btnTest3" class="btn btn-primary">add 2nd order</a>
-                                <a href="#" id="btnTest4" class="btn btn-primary">select test</a>
-                                <a href="#" id="btnTest5" class="btn btn-primary">orderostatok table</a>
-                            </div>
-                            <div class="card-body" id="testRes">
-
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">CPU Traffic</span>
+                                    <span class="info-box-number"> 10 <small>%</small> </span>
+                                </div>
                             </div>
                         </div>
-                    <? } ?>
-
-                    <div class="card collapsed-card">
-                        <div class="card-header" data-card-widget="collapse">
-                            <h5 class="card-title">Добавить приказ</h5>
-
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                    <i class="fas fa-plus"></i>
-                                </button>
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="info-box mb-3">
+                                <span class="info-box-icon bg-danger elevation-1"><i
+                                            class="fas fa-thumbs-up"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Likes</span>
+                                    <span class="info-box-number">41,410</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-2">
-                                    <div class="form-group">
-                                        <label for="orderYear">Год приказа</label>
-                                        <input type="text" class="form-control" id="orderYear" placeholder="Введите год"
-                                               value="2021" disabled>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="form-group">
-                                        <label for="orderFromDate">Действует с</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                          <span class="input-group-text">
-                                            <i class="far fa-calendar-alt"></i>
-                                          </span>
-                                            </div>
-                                            <input type="text"
-                                                   class="form-control float-right datetimepicker-input input-add-order"
-                                                   id="orderFromDate" data-toggle="datetimepicker"
-                                                   data-target="#orderFromDate" placeholder="Введите дату">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <!--                                    <div class="form-group">-->
-                                    <!--                                        <label for="orderZan">Занятость койки</label>-->
-                                    <!--                                        <input type="text" class="form-control" id="orderZan"-->
-                                    <!--                                               placeholder="Введите число"-->
-                                    <!--                                               value="0">-->
-                                    <!--                                    </div>-->
-                                </div>
-                                <div class="col-6">
-                                    <div class="callout callout-success">
-                                        <h5>Койки по отделениям:</h5>
+                        <div class="clearfix hidden-md-up"></div>
 
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">1-ое отделение:</span>
-                                            </div>
-                                            <input type="text" class="form-control input-add-order" id="otdel1LechKo"
-                                                   placeholder="Лечебные"
-                                                   value="">
-                                            <input type="text" class="form-control input-add-order" id="otdel1ReabKo"
-                                                   placeholder="Реабилитационные"
-                                                   value="">
-                                            <input type="text" class="form-control input-add-order" id="otdel1HozKo"
-                                                   placeholder="Хоз-расчетные"
-                                                   value="">
-                                        </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="info-box mb-3">
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
 
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">2-ое отделение:</span>
-                                            </div>
-                                            <input type="text" class="form-control input-add-order" id="otdel2LechKo"
-                                                   placeholder="Лечебные"
-                                                   value="">
-                                            <input type="text" class="form-control input-add-order" id="otdel2ReabKo"
-                                                   placeholder="Реабилитационные"
-                                                   value="">
-                                            <input type="text" class="form-control input-add-order" id="otdel2HozKo"
-                                                   placeholder="Хоз-расчетные"
-                                                   value="">
-                                        </div>
-
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">3-ье отделение:</span>
-                                            </div>
-                                            <input type="text" class="form-control input-add-order" id="otdel3LechKo"
-                                                   placeholder="Лечебные"
-                                                   value="">
-                                            <input type="text" class="form-control input-add-order" id="otdel3ReabKo"
-                                                   placeholder="Реабилитационные"
-                                                   value="">
-                                            <input type="text" class="form-control input-add-order" id="otdel3HozKo"
-                                                   placeholder="Хоз-расчетные"
-                                                   value="">
-                                        </div>
-                                    </div>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Sales</span>
+                                    <span class="info-box-number">760</span>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="callout callout-success">
-                                        <h5>Планово пролечить пациентов:</h5>
-
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Лечебные:</span>
-                                            </div>
-                                            <input type="text" class="form-control input-add-order" id="orderPlanLech"
-                                                   value="0">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Реабилитационные:</span>
-                                            </div>
-                                            <input type="text" class="form-control input-add-order" id="orderPlanReab"
-                                                   value="0">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Хоз-расчетные:</span>
-                                            </div>
-                                            <input type="text" class="form-control input-add-order" id="orderPlanHoz"
-                                                   value="0">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="callout callout-success">
-                                        <h5>Койко-дни план:</h5>
-
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Лечебные:</span>
-                                            </div>
-                                            <input type="text" class="form-control input-add-order" id="kodnLech"
-                                                   value="0">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Реабилитационные:</span>
-                                            </div>
-                                            <input type="text" class="form-control input-add-order" id="kodnReab"
-                                                   value="0">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Хоз-расчетные:</span>
-                                            </div>
-                                            <input type="text" class="form-control input-add-order" id="kodnHoz"
-                                                   value="0">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                </div>
-
-                                <div class="col-6">
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-primary" id="addOrder">Создать приказ</a>
                         </div>
-                        <div class="card-footer">
-                            <div class="row" id="orderAddResult">
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="info-box mb-3">
+                                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
 
+                                <div class="info-box-content">
+                                    <span class="info-box-text">New Members</span>
+                                    <span class="info-box-number">2,000</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Добавить платеж</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="description">Размер</label>
+                                                <input type="text" class="form-control" id="amount"
+                                                       placeholder="Введите размер"
+                                                       value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="description">Описание</label>
+                                                <input type="text" class="form-control" id="description"
+                                                       placeholder="Введите описание"
+                                                       value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="transferDate">Дата</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                      <span class="input-group-text">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                      </span>
+                                                    </div>
+                                                    <input type="text"
+                                                           class="form-control float-right datetimepicker-input input-add-order"
+                                                           id="transferDate" data-toggle="datetimepicker"
+                                                           data-target="#transferDate" placeholder="Введите дату">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group" id="phForWhat">
+                                                <label for="description">За что</label>
+                                                <select class="custom-select" id="forWhat">
+                                                    <option value="0" selected>Не выбрано</option>
+                                                    <option value="1">За сосо</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group" id="phFromWhere">
+                                                <label for="description">От кого</label>
+                                                <select class="custom-select" id="fromWhere">
+                                                    <option value="0" selected>Не выбрано</option>
+                                                    <option value="1">За сосо</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-danger" id="addOutcome">Создать расход</a>
+                                    <a href="#" class="btn btn-success" id="addIncome">Создать приход</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Добавить "За что"</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="forWhatNewName">Название</label>
+                                                <input type="text" class="form-control" id="forWhatNewName"
+                                                       placeholder="Введите название"
+                                                       value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary" id="addForWhat">Создать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Добавить "От кого"</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="fromWhereNewName">Название</label>
+                                                <input type="text" class="form-control" id="fromWhereNewName"
+                                                       placeholder="Введите название"
+                                                       value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary" id="addFromWhere">Создать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="card card-primary card-outline">
                         <div class="card-header">
-                            <h5 class="m-0">Список приказов</h5>
+                            <h5 class="m-0">Список платежей</h5>
                         </div>
                         <div class="card-body">
                             <table id="orderList" class="table table-bordered table-striped" style="width:100%">
                                 <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Год</th>
-                                    <th>Начало</th>
-                                    <th>Конец</th>
-                                    <th>План леч. коек</th>
-                                    <th>План реаб. коек</th>
-                                    <th>План хоз. коек</th>
-                                    <th>Занятость</th>
-                                    <th>Сред. леч. коек</th>
-                                    <th>Сред. реаб. коек</th>
-                                    <th>Сред. хоз. коек</th>
-                                    <th>Дата создания</th>
+                                    <th>Дата</th>
+                                    <th>Описание</th>
+                                    <th>Приход/расход</th>
+                                    <th>От кого</th>
+                                    <th>За что</th>
+                                    <th>Размер</th>
                                 </tr>
                                 </thead>
-                                <tfoot>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Год</th>
-                                    <th>Начало</th>
-                                    <th>Конец</th>
-                                    <th>План леч. коек</th>
-                                    <th>План реаб. коек</th>
-                                    <th>План хоз. коек</th>
-                                    <th>Занятость</th>
-                                    <th>Сред. леч. коек</th>
-                                    <th>Сред. реаб. коек</th>
-                                    <th>Сред. хоз. коек</th>
-                                    <th>Дата создания</th>
-                                </tr>
-                                </tfoot>
                             </table>
                             <a href="#" id="refreshOrderList" class="btn btn-primary">Обновить</a>
                         </div>
@@ -380,151 +337,210 @@ ob_end_flush();
 <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
 <script src="dist/js/adminlte.min.js"></script>
 <script>
+    function reloadSelects() {
+        $.ajax({
+            url: 'ajax.php',
+            method: 'GET',
+            data: {
+                type: <?= Callback::GET_SELECTS ?>,
+            },
+            success: function (e) {
+                const _data = JSON.parse(e);
+                console.log(_data);
+                $('#phFromWhere').html(_data.from);
+                $('#phForWhat').html(_data.for);
+            }
+        });
+    }
     $(function () {
-        $('#orderFromDate').datetimepicker({
+        reloadSelects();
+        $('#transferDate').datetimepicker({
             locale: 'RU',
             timePicker: false,
             format: "DD.MM.YYYY"
         });
-        $(document).on('click', '#btnTest1', function () {
+        $(document).on('click', '#addForWhat', function () {
+            const _name = $('#forWhatNewName').val();
             $.ajax({
                 url: 'ajax.php',
                 method: 'GET',
                 data: {
-                    type: 'test',
-                    test: 1
-                },
-                success: function (e) {
-                    $('#testRes').html(e);
-                    toastr.success('Приказ создан.');
-                }
-            })
-        });
-        $(document).on('click', '#btnTest2', function () {
-            $.ajax({
-                url: 'ajax.php',
-                method: 'GET',
-                data: {
-                    type: 'test',
-                    test: 2
-                },
-                success: function (e) {
-                    $('#testRes').html(e);
-                    orderTable.ajax.reload();
-                }
-            })
-        });
-        $(document).on('click', '#btnTest3', function () {
-            $.ajax({
-                url: 'ajax.php',
-                method: 'GET',
-                data: {
-                    type: 'test',
-                    test: 3
-                },
-                success: function (e) {
-                    $('#testRes').html(e);
-                    orderTable.ajax.reload();
-                }
-            })
-        });
-        $(document).on('click', '#btnTest4', function () {
-            $.ajax({
-                url: 'ajax.php',
-                method: 'GET',
-                data: {
-                    type: 'test',
-                    test: 4
-                },
-                success: function (e) {
-                    $('#testRes').html(e);
-                }
-            })
-        });
-        $(document).on('click', '#btnTest5', function () {
-            $.ajax({
-                url: 'ajax.php',
-                method: 'GET',
-                data: {
-                    type: 'test',
-                    test: 5
-                },
-                success: function (e) {
-                    $('#testRes').html(e);
-                }
-            })
-        });
-        $(document).on('click', '#addOrder', function () {
-            let lechKo = parseInt($('#otdel1LechKo').val()) + parseInt($('#otdel2LechKo').val()) + parseInt($('#otdel3LechKo').val());
-            let reabKo = parseInt($('#otdel1ReabKo').val()) + parseInt($('#otdel2ReabKo').val()) + parseInt($('#otdel3ReabKo').val());
-            let zan = parseInt($('#orderZan').val());
-            let planLech = parseInt($('#orderPlanLech').val());
-            let planReab = parseInt($('#orderPlanReab').val());
-            let avgLech = lechKo * zan / planLech;
-            let avgReab = reabKo * zan / planReab;
-            $('#orderAvgLech').val(avgLech);
-            $('#orderAvgReab').val(avgReab);
-            $.ajax({
-                url: 'ajax.php',
-                method: 'GET',
-                data: {
-                    type: <?= Callback::ADD_ORDER ?>, data: {
-                        year: $('#orderYear').val(),
-                        dateStart: $('#orderFromDate').val(),
-                        //zanatost: $('#orderZan').val(),
-                        planLech: $('#orderPlanLech').val(),
-                        planReab: $('#orderPlanReab').val(),
-                        planHoz: $('#orderPlanHoz').val(),
-                        kodnLech: $('#kodnLech').val(),
-                        kodnReab: $('#kodnReab').val(),
-                        kodnHoz: $('#kodnHoz').val(),
-                        otdel1LechKo: $('#otdel1LechKo').val(),
-                        otdel1ReabKo: $('#otdel1ReabKo').val(),
-                        otdel1HozKo: $('#otdel1HozKo').val(),
-                        otdel2LechKo: $('#otdel2LechKo').val(),
-                        otdel2ReabKo: $('#otdel2ReabKo').val(),
-                        otdel2HozKo: $('#otdel2HozKo').val(),
-                        otdel3LechKo: $('#otdel3LechKo').val(),
-                        otdel3ReabKo: $('#otdel3ReabKo').val(),
-                        otdel3HozKo: $('#otdel3HozKo').val()
+                    type: <?= Callback::ADD_FOR ?>, data: {
+                        name: _name,
                     }
                 },
                 success: function (e) {
-                    if (e.toString() == 'ok') {
-                        $('#orderAddResult').html('Приказ успешно создан!');
-                        toastr.success('Приказ создан.');
-                        orderTable.ajax.reload();
+                    const _data = JSON.parse(e)
+                    if (e && _data.data > 0) {
+                        $('#forWhatNewName').val('');
+                        toastr.success('Значение создано.');
+                        reloadSelects();
+                        // orderTable.ajax.reload();
                     } else {
-                        toastr.error('Приказ не создан.');
-                        $('#orderAddResult').html('<pre>ОШИБКА:\r\n' + e + '</pre>');
+                        toastr.error('Значение не создано.');
                     }
                 }
             });
         });
-        let orderTable = $('#orderList').DataTable({
-            "ajax": "ajax.php?type=" + <?= Callback::GET_ORDERS ?>,
-            "columns": [
-                {"data": "id"},
-                {"data": "year"},
-                {"data": "dateStart"},
-                {"data": "dateEnd"},
-                {"data": "planLech"},
-                {"data": "planReab"},
-                {"data": "planHoz"},
-                {"data": "zanatost"},
-                {"data": "avgLech"},
-                {"data": "avgReab"},
-                {"data": "avgHoz"},
-                {"data": "dateAdd"}
-            ],
-            language: {
-                url: 'plugins/ru.json'
+        $(document).on('click', '#addFromWhere', function () {
+            const _name = $('#fromWhereNewName').val();
+            $.ajax({
+                url: 'ajax.php',
+                method: 'GET',
+                data: {
+                    type: <?= Callback::ADD_FROM ?>, data: {
+                        name: _name,
+                    }
+                },
+                success: function (e) {
+                    const _data = JSON.parse(e)
+                    if (e && _data.data > 0) {
+                        $('#fromWhereNewName').val('');
+                        toastr.success('Значение создано.');
+                        reloadSelects();
+                        // orderTable.ajax.reload();
+                    } else {
+                        toastr.error('Значение не создано.');
+                    }
+                }
+            });
+        });
+
+        $(document).on('click', '#addIncome', function () {
+            const _from = $('#fromWhere').val();
+            const _for = $('#forWhat').val();
+            const _date = $('#transferDate').val();
+            const _desc = $('#description').val();
+            const _amount = $('#amount').val();
+
+            if (_from === 0 || _for === 0) {
+                toastr.error('Нужно выбрать "за что" и "от кого".');
+                return;
             }
+            if (_date === '') {
+                toastr.error('Нужно выбрать дату.');
+                return;
+            }
+            if (_amount === '') {
+                toastr.error('Нужно внести размер.');
+                return;
+            }
+            $.ajax({
+                url: 'ajax.php',
+                method: 'GET',
+                data: {
+                    type: <?= Callback::ADD_INCOME ?>, data: {
+                        amount: _amount,
+                        for: _for,
+                        from: _from,
+                        desc: _desc,
+                        date: _date,
+                    }
+                },
+                success: function (e) {
+                    const _data = JSON.parse(e);
+                    if (e && _data.data > 0) {
+                        $('#amount').val('');
+                        $('#description').val('');
+                        toastr.success('Приход создан.');
+                        // orderTable.ajax.reload();
+                    } else {
+                        toastr.error('Приход не создан.');
+                        console.log(e);
+                    }
+                }
+            });
+            //let orderTable = $('#orderList').DataTable({
+            //    "ajax": "ajax.php?type=" + <?//= Callback::GET_ORDERS ?>//,
+            //    "columns": [
+            //        {"data": "id"},
+            //        {"data": "year"},
+            //        {"data": "dateStart"},
+            //        {"data": "dateEnd"},
+            //        {"data": "planLech"},
+            //        {"data": "planReab"},
+            //        {"data": "planHoz"},
+            //        {"data": "zanatost"},
+            //        {"data": "avgLech"},
+            //        {"data": "avgReab"},
+            //        {"data": "avgHoz"},
+            //        {"data": "dateAdd"}
+            //    ],
+            //    language: {
+            //        url: 'plugins/ru.json'
+            //    }
         });
-        $('#orderFromDate').on('change.datetimepicker', function (e) {
-            $('#orderYear').val($('#orderFromDate').val().slice(-4));
+
+        $(document).on('click', '#addOutcome', function () {
+            const _from = $('#fromWhere').val();
+            const _for = $('#forWhat').val();
+            const _date = $('#transferDate').val();
+            const _desc = $('#description').val();
+            const _amount = $('#amount').val();
+
+            if (_from === 0 || _for === 0) {
+                toastr.error('Нужно выбрать "за что" и "от кого".');
+                return;
+            }
+            if (_date === '') {
+                toastr.error('Нужно выбрать дату.');
+                return;
+            }
+            if (_amount === '') {
+                toastr.error('Нужно внести размер.');
+                return;
+            }
+            $.ajax({
+                url: 'ajax.php',
+                method: 'GET',
+                data: {
+                    type: <?= Callback::ADD_OUTCOME ?>, data: {
+                        amount: _amount,
+                        for: _for,
+                        from: _from,
+                        desc: _desc,
+                        date: _date,
+                    }
+                },
+                success: function (e) {
+                    const _data = JSON.parse(e);
+                    if (e && _data.data > 0) {
+                        $('#amount').val('');
+                        $('#description').val('');
+                        toastr.success('Приход создан.');
+                        // orderTable.ajax.reload();
+                    } else {
+                        toastr.error('Приход не создан.');
+                        console.log(e);
+                    }
+                }
+            });
+            //let orderTable = $('#orderList').DataTable({
+            //    "ajax": "ajax.php?type=" + <?//= Callback::GET_ORDERS ?>//,
+            //    "columns": [
+            //        {"data": "id"},
+            //        {"data": "year"},
+            //        {"data": "dateStart"},
+            //        {"data": "dateEnd"},
+            //        {"data": "planLech"},
+            //        {"data": "planReab"},
+            //        {"data": "planHoz"},
+            //        {"data": "zanatost"},
+            //        {"data": "avgLech"},
+            //        {"data": "avgReab"},
+            //        {"data": "avgHoz"},
+            //        {"data": "dateAdd"}
+            //    ],
+            //    language: {
+            //        url: 'plugins/ru.json'
+            //    }
         });
-    });
+        $('#transferDate').on('change.datetimepicker', function (e) {
+            console.log($('#transferDate').val().slice(-4));
+            //$('#orderYear').val($('#transferDate').val().slice(-4));
+        });
+    })
+    ;
 
 </script>
 </body>

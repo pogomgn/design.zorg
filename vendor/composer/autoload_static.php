@@ -11,13 +11,11 @@ class ComposerStaticInit3c0d3c4c55459f9a4e7f5523c78940b5
     );
 
     public static $prefixLengthsPsr4 = array (
-        'o' => 
-        array (
-            'ond\\' => 4,
-        ),
         'c' => 
         array (
+            'controller\\' => 11,
             'classes\\' => 8,
+            'claire\\' => 7,
         ),
         'L' => 
         array (
@@ -26,13 +24,17 @@ class ComposerStaticInit3c0d3c4c55459f9a4e7f5523c78940b5
     );
 
     public static $prefixDirsPsr4 = array (
-        'ond\\' => 
+        'controller\\' => 
         array (
-            0 => __DIR__ . '/..' . '/ond.core',
+            0 => __DIR__ . '/..' . '/controller',
         ),
         'classes\\' => 
         array (
             0 => __DIR__ . '/../..' . '/classes',
+        ),
+        'claire\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/claire',
         ),
         'League\\Csv\\' => 
         array (

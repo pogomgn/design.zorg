@@ -6,7 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ond\\' => array($vendorDir . '/ond.core'),
+    'controller\\' => array($vendorDir . '/controller'),
     'classes\\' => array($baseDir . '/classes'),
+    'claire\\' => array($vendorDir . '/claire'),
     'League\\Csv\\' => array($vendorDir . '/league/csv/src'),
 );

@@ -42,9 +42,10 @@ abstract class Transfer
 
     public static function addTransfer($amount, $for_id, $from_id, $desc = '', $date = '')
     {
-        $date = !$date ? 'sysdate()' : "'$date'";
+        $date = !$date ? 'sysdate()' : ('\'' . (new \DateTime($date))->format('Y-m-d') . '\'');
         $db = new DB();
-        $db->query('insert into `' . static::TABLE . "` (`date`, `amount`, `type`, `forwhat_id`, `fromwhere_id`, `description`) value ($date, $amount, " . static::getType() . ", $for_id, $from_id, '$desc')");
+        Utils::log('insert into `' . static::TABLE . "` (`date`, `amount`, `type`, `forwhat_id`, `fromwhere_id`, `description`) value ($date, $amount, " . static::getType() . ", $for_id, $from_id, '$desc')");
+        $db->query('insert into `' . static::TABLE . "` (`date`, `amount`, `type`, `forwhat_id`, `fromwhere_id`, `description`) value ($date, $amount, " . static::getType() . ", $for_id, $from_id, '$desc');");
         return $db->getLastId();
     }
 }

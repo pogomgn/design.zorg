@@ -1,9 +1,10 @@
 <?
 
-namespace Controller;
+namespace controller;
 
 use claire\ForWhat;
 use claire\FromWhere;
+use claire\Transfer;
 
 class Front
 {
@@ -17,13 +18,18 @@ class Front
         ];
     }
 
-    public static function addForWhat($name)
+    public static function addForWhat($name): int
     {
         return ForWhat::add($name);
     }
 
-    public static function addFromWhere($name)
+    public static function addFromWhere($name): int
     {
         return FromWhere::add($name);
+    }
+
+    public static function addTransfer($amount, $for_id, $from_id, $desc, $date)
+    {
+        return Transfer::addTransfer($amount, $for_id, $from_id, $desc, $date);
     }
 }

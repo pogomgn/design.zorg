@@ -43,11 +43,24 @@ $isAdmin = $USER['type'] == 1;
 ob_end_flush();
 
 $type = addslashes($_REQUEST['type']);
-$data = isset($_REQUEST['data']) ? $_REQUEST['data'] : [];
+$data = $_REQUEST['data'] ?? [];
 
 switch ($type) {
     case Callback::GET_SELECTS:
-        echo json_encode(['data' => Callback::getSelects()]);
+        echo json_encode(Callback::getSelects());
+        break;
+    case Callback::ADD_FROM:
+        echo json_encode(['data' => Callback::addFromWhere($data)]);
+        break;
+    case Callback::ADD_FOR:
+        Utils::log(print_r($data, true));
+        echo json_encode(['data' => Callback::addForWhat($data)]);
+        break;
+    case Callback::ADD_INCOME:
+        echo json_encode(['data' => Callback::addTransfer($data, true)]);
+        break;
+    case Callback::ADD_OUTCOME:
+        echo json_encode(['data' => Callback::addTransfer($data, false)]);
         break;
     default:
         echo 'error 0';
