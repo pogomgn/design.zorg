@@ -46,8 +46,8 @@ $type = addslashes($_REQUEST['type']);
 $data = isset($_REQUEST['data']) ? $_REQUEST['data'] : [];
 
 switch ($type) {
-    case Callback::GET_TRANSFERS:
-        echo json_encode(['data' => Callback::getOrders()]);
+    case Callback::GET_SELECTS:
+        echo json_encode(['data' => Callback::getSelects()]);
         break;
     default:
         echo 'error 0';

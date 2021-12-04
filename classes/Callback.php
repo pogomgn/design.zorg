@@ -2,21 +2,26 @@
 
 namespace classes;
 
-use claire\Transfer;
+use controller\Front;
 
 class Callback
 {
-    public const GET_TRANSFERS = 1;
+    public const GET_SELECTS = 1;
+    public const ADD_FROM = 2;
+    public const ADD_FOR = 3;
 
-    public static function getOrders(): array
+    public static function getSelects(): array
     {
-        $res = (new Transfer())->getOrders();
-        foreach ($res as $k => $value) {
-            $res[$k]['dateStart'] = substr($value['dateStart'], 0, 10);
-            $res[$k]['dateEnd'] = substr($value['dateEnd'], 0, 10);
-            $res[$k]['dateAdd'] = substr($value['dateAdd'], 0, 10);
-        }
-        return $res;
+        return Front::getSelects();
     }
 
+    public static function addForWhat(): array
+    {
+        return Front::getSelects();
+    }
+
+    public static function addFromWhere(): array
+    {
+        return Front::getSelects();
+    }
 }
