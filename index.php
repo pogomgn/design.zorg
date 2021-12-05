@@ -183,9 +183,9 @@ ob_end_flush();
                                     <div class="row">
                                         <div class="col-4">
                                             <div class="form-group">
-                                                <label for="description">Размер</label>
+                                                <label for="description">Сумма</label>
                                                 <input type="text" class="form-control" id="amount"
-                                                       placeholder="Введите размер"
+                                                       placeholder="Введите сумму"
                                                        value="">
                                             </div>
                                         </div>
@@ -296,7 +296,7 @@ ob_end_flush();
                                     <th>Приход/расход</th>
                                     <th>От кого</th>
                                     <th>За что</th>
-                                    <th>Размер</th>
+                                    <th>Сумма</th>
                                 </tr>
                                 </thead>
                             </table>
@@ -422,7 +422,7 @@ ob_end_flush();
                 return;
             }
             if (_amount === '') {
-                toastr.error('Нужно внести размер.');
+                toastr.error('Нужно внести сумму.');
                 return;
             }
             $.ajax({
@@ -487,7 +487,7 @@ ob_end_flush();
                 return;
             }
             if (_amount === '') {
-                toastr.error('Нужно внести размер.');
+                toastr.error('Нужно внести сумму.');
                 return;
             }
             $.ajax({
